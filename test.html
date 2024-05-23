@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
+    <title>Testando JavaScript com Jasmine</title>
+</head>
+<body>
+    <script>
+        function areWordsEqual(a, b) {
+        return a === b;
+        }
+
+        describe("Função areWordsEqual", function() {
+            it("deve restornar verdadeiro quando as palavras forem iguais", function() {
+                expect(areWordsEqual("eduardo", "eduardo")).toBe(true);
+            });
+        });
+
+        describe("Função areWordsEqual", function() {
+            it("deve retornar falso quando as palavras forem diferentes", function() {
+                expect(areWordsEqual("eduardo", "eduard")).toBe(false);
+            });
+        });
+    </script>
+</body>
+</html>
